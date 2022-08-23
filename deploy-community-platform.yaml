@@ -29,7 +29,6 @@ jobs:
     steps:
       - name: Wait for images to have been built
         timeout-minutes: 10
-        uses: lewagon/wait-on-check-action@v1.0.0
         with:
           ref: ${{ env.GIT_SHA }}
           check-regexp: "community-platform.*"
